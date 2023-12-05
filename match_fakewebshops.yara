@@ -6,11 +6,15 @@ rule match_fakewebshops_v1
 		description = "matches me some webshops' strings"
 	strings:
 		$str1 = "Službu za Korisnike"
-		$str2 = "shopping_cart.html"
-		$str3 = "bof  breadcrumb"
+		$str2 = "Outlet"
+		$str3 = "bof "
 		$str4 = "$.noConflict()"
-		$a = "Outlet"
-		$b = "Popust" 
+		$str5 = " breadcrumb"
+		$str6 = "eof "
+		$str7 = "Popust" 
+		$str8 = "==== CURRENCIES ==="
+		$a = "shopping_cart.html"
+
 	condition:
-	   3 of ($str*) and $a and $b
+	   4 of ($str*) and $a
 }
